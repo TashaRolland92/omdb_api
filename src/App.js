@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "./App.css";
 
 function App() {
 
@@ -25,27 +24,27 @@ function App() {
 	};
 
 	return (
-		<div className="App">
-			<h1>Movie search app</h1>
-			<p>Use this app to find out more information about your favorite movies!</p>
+		<div className="App container mx-auto">
+			<h1 className="text-primary-content text-4xl py-4">T-iMDB</h1>
+			<p className="text-primary-content text-base">Use the search below to find out more information about your favourite movies!</p>
 
-			<form onSubmit={handleSubmit}>
-				<label htmlFor="search">Movie title:</label>
+			<form onSubmit={handleSubmit} className="bg-transparent">
 				<input
 					type="text"
 					name="search"
 					id="searchTerm"
+					className="search bg-transparent border-transparent"
 					placeholder="Enter movie title..."
 					value={searchTerm}
 					onChange={(e) => setSearchTerm(e.target.value)}
 				/>
-				<button type="submit">Search</button>
+				<button type="submit" className="rounded-md bg-primary-content">Search</button>
 			</form>
 
 			{results && results.Response === "True" ? (
 				<div className="results">
 					<div className="movie-details">
-						<h2>Movie title: { results.Title}</h2>
+						<h2>{ results.Title}</h2>
 						<ul>
 							<li>Released: {results.Released}</li>
 							<li>Rating: {results.Rated}</li>
@@ -55,7 +54,7 @@ function App() {
 					</div>
 					<div className="imdb-details">
 						<ul>
-							<li>iMDB Rating: {results.imdbRating}</li>
+							<li>iMDB Rating: <span className="font-bold">{results.imdbRating}</span></li>
 							<li>Other Ratings:</li>
 							<li>iMDB Votes: {results.imdbVotes}</li>
 						</ul>
