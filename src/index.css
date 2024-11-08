@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
 body {
-  @apply font-sans;
+  @apply font-lato;
+  background-color: theme('colors.primary-color');
+}
+
+.logo{
+  color: transparent;
+}
+
+.search,
+input:-internal-autofill-selected{
+  background-color: transparent !important;
+}
+
+.squad-image{
+  z-index: -1;
 }

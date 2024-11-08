@@ -42,7 +42,8 @@ module.exports = {
       'danger--color': '#f86767',
     },
     fontFamily: {
-      sans: ['Lato', 'sans-serif'],
+      lato: ['Lato', 'sans-serif'],
+      anton: ['Anton', 'sans-serif'],
     },
   },
   plugins: [],
