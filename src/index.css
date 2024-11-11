@@ -3,23 +3,39 @@
 @tailwind utilities;
 
 /* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
 
 body {
-  @apply font-lato;
-  background-color: theme('colors.primary-color');
+	@apply font-lato;
+	background-color: theme("colors.primary-color");
 }
 
-.logo{
-  color: transparent;
+.colour-transparent {
+	color: transparent;
 }
 
 .search,
-input:-internal-autofill-selected{
-  background-color: transparent !important;
+input:-internal-autofill-selected {
+	transition: box-shadow ease-in .3s;
+	background-color: transparent !important;
+
+	&:focus {
+		box-shadow: 0 6px 12px -10px #fff;
+	}
 }
 
-.squad-image{
-  z-index: -1;
+.squad-image {
+	z-index: -1;
+	width: 100%;
+	max-width: 700px;
+	max-height: 600px;
+}
+
+.poster-plot-container {
+	img {
+		width: 100%;
+		max-width: 300px;
+		max-height: 475px;
+	}
 }
