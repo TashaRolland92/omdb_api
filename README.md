@@ -2,6 +2,12 @@
 
 Movie search app using the OMDB API (https://www.omdbapi.com/). Using the create react app, react hooks, axios and tailwindcss for UI/UX.
 
+![](https://github.com/TashaRolland92/omdb_api/blob/master/public/images/t-imdb_desktop.gif)
+
+---
+
+![](https://github.com/TashaRolland92/omdb_api/blob/master/public/images/t-imdb_mobile.gif)
+
 ## Available Scripts
 
 In the project directory, you can run:
